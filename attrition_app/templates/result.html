@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div  >
+        <h1>Prediction Result</h1>
+        <p>The predicted attrition status is: {{ prediction }}</p>
+        <br>
+        {% comment %} <a href="{% url 'homepage' %}">....Back to Home ....</a> {% endcomment %}
+    </div>
+</body>
+
+</html>

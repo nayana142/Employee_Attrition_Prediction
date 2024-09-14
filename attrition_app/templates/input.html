@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body class="body">
+    
+    <div style="margin-top: 60px;">
+        <h1 class="header" style=" background-color: white;color:black;border-radius: 6px;padding: 10px;">Employee Attrition Prediction </h1>
+        <form method="POST" action="{% url 'employee_predict' %}" style='display: flex; align-items: center; justify-content: center;flex-direction: column;'>
+            {% csrf_token %}
+            <!-- Age -->
+            <div style='box-sizing: border-box;width: 70%;padding: 4px;border: 1px solid #ccc;border-radius: 5px;font-size: 16px;background-color: black; color: white;'>
+                <label for="age" class="label-bold">Age :</label>
+                <input type="number" name="age" id="age" min="18" max="100" required style="width: 300px;border-radius: 10px;height: 20px;">
+            </div>
+            <br>
+            <!-- Business Travel -->
+            <div style='box-sizing: border-box;width: 70%;padding: 4px;border: 1px solid #ccc;border-radius: 5px;font-size: 16px;background-color: black;color: white;'>
+                <label for="business_travel" class="label-bold">Business Travel :</label>
+                <select name="business_travel" id="business_travel" style="width: 300px;border-radius: 10px;height: 20px;">
+                    <option value="Some Travel">Some Travel</option>
+                    <option value="No Travel">No Travel</option>
+                    <option value="Frequent Traveller">Frequent Traveller</option>
+                </select>
+            </div>
+            <br>
+            <!-- Department -->
+            <div style='box-sizing: border-box;width: 70%;padding: 4px;border: 1px solid #ccc;border-radius: 5px;font-size: 16px;background-color: black;color: white;'>
+                <label for="department" class="label-bold">Department :</label>
+                <select name="department" id="department" style="width: 300px;border-radius: 10px;height: 20px;">
+                    <option value="Sales">Sales</option>
+                    <option value="Human Resources">Human Resources</option>
+                    <option value="Technology">Technology</option>
+                </select>
+            </div>
+            <br>
+            <!-- Job Role -->
+            <div style='box-sizing: border-box;width: 70%;padding: 4px;border: 1px solid #ccc;border-radius: 5px;font-size: 16px;background-color: black;color: white;'>
+                <label for="job_role" class="label-bold">Job Role :</label>
+                <select name="job_role" id="job_role" style="width: 300px;border-radius: 10px;height: 20px;">
+                    <option value="Sales Executive">Sales Executive</option>
+                    <option value="HR Business Partner">HR Business Partner</option>
+                    <option value="Engineering Manager">Engineering Manager</option>
+                    <option value="Recruiter">Recruiter</option>
+                    <option value="Data Scientist">Data Scientist</option>
+                    <option value="Machine Learning Engineer">Machine Learning Engineer</option>
+                    <option value="Manager">Manager</option>
+                    <option value="Software Engineer">Software Engineer</option>
+                    <option value="Senior Software Engineer">Senior Software Engineer</option>
+                    <option value="Sales Representative">Sales Representative</option>
+                    <option value="Analytics Manager">Analytics Manager</option>
+                    <option value="HR Executive">HR Executive</option>
+                    <option value="HR Manager">HR Manager</option>
+                </select>
+            </div>
+            <br>
+            <!-- Marital Status -->
+            <div style='box-sizing: border-box;width: 70%;padding: 4px;border: 1px solid #ccc;border-radius: 5px;font-size: 16px; background-color: black;color: white;'>
+                <label for="marital_status" class="label-bold">Marital Status :</label>
+                <select name="marital_status" id="marital_status" style="width: 300px;border-radius: 10px;height: 20px;"> 
+                    <option value="Divorced">Divorced</option>
+                    <option value="Single">Single</option>
+                    <option value="Married">Married</option>
+                </select>
+            </div>
+            <br>
+            <!-- Salary -->
+            <div style='box-sizing: border-box;width: 70%;padding: 4px;border: 1px solid #ccc;border-radius: 5px;font-size: 16px; background-color: black;color: white;'>
+                <label for="salary" class="label-bold">Salary :</label>
+                <input type="number" name="salary" id="salary" step="0.01" required style="width: 300px;border-radius: 10px;height: 20px;">
+            </div>
+            <br>
+            <div style='box-sizing: border-box;width: 70%;padding: 4px;border: 1px solid #ccc;border-radius: 5px;font-size: 16px; background-color: black;color: white;'>
+                <label for="overtime" class="label-bold">Over Time :</label>
+                <select name="overtime" id="overtime" style="width: 300px;border-radius: 10px;height: 20px;"> 
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <br>
+            <!-- Years at Company -->
+            <div style='box-sizing: border-box;width: 70%;padding: 4px;border: 1px solid #ccc;border-radius: 5px;font-size: 16px; background-color: black;color: white;'>
+                <label for="years_at_company" class="label-bold">Years at Company :</label>
+                <input type="number" name="years_at_company" id="years_at_company" min="0" step="1" required style="width: 300px;border-radius: 10px;height: 20px;">
+            </div>
+            <br>
+            <!-- Years in Most Recent Role -->
+            <div style='box-sizing: border-box;width: 70%;padding: 4px;border: 1px solid #ccc;border-radius: 5px;font-size: 16px; background-color: black;color: white;'>
+                <label for="years_in_most_recent_role" class="label-bold">Years in Most Recent Role :</label>
+                <input type="number" name="years_in_most_recent_role" id="years_in_most_recent_role" min="0" step="1" required style="width: 300px;border-radius: 10px;height: 20px;">
+            </div>
+            <br>
+            <!-- Years Since Last Promotion -->
+            <div style='box-sizing: border-box;width: 70%;padding: 4px;border: 1px solid #ccc;border-radius: 5px;font-size: 16px; background-color: black;color: white;'>
+                <label for="years_since_last_promotion" class="label-bold">Years Since Last Promotion :</label>
+                <input type="number" name="years_since_last_promotion" id="years_since_last_promotion" min="0" step="1" required style="width: 300px;border-radius: 10px;height: 20px;">
+            </div>
+            <br>
+            <div style='display: flex; align-items: center; justify-content: center;width: inherit;padding: 10px 20px;"width: 60px; ' >
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+        {% for msg in messages %}
+            {{msg}}
+        {% endfor %}
+    </div>
+</body>
+</html>

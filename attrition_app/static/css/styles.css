@@ -1,0 +1,135 @@
+body {
+    background-image: url('/static/images/home.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 20px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    
+    
+    
+}
+.output{
+
+    background-image: url('/static/images/output2.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;   
+
+}
+header {
+    border: 2px solid #00ccff; /* Adjust the color and thickness */
+    background-color: #333; /* Background color for the header */
+    color: white; /* Text color */
+    text-align: center;
+    position: fixed; /* Ensures the header is always at the top */
+    width: 100%; /* Makes sure the header spans the full width of the page */ 
+    padding: 10px;
+    z-index: 1000; /* Ensures it stays on top of other content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow effect */
+    margin-top: 60px;
+    z-index: 9999;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.btn
+{
+    width: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack items vertically */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    display: flex;
+    
+
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+}
+
+.form-container form div {
+    margin-bottom: 15px;
+    background-color: #fff;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    background-color: #fff;
+}
+
+.label-bold {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* .input-box,
+.select-box {
+    width: 100%;
+    height: 40px; /* Uniform height */
+    /* padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+} */ */
+
+.input-box,
+.select-box {
+    width: calc(100% - 150px); /* Full width minus the label width + margin */
+    height: 40px; /* Uniform height */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+} 
+
+button {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #396200;
+}
+a{
+    color:white;
+}

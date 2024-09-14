@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Employee Form</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div style='display:flex; justify-content:center'>
+    <h2>Predict Employee Attrition</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class='button'>
+            <button type="submit">Predict</button>
+        </div>
+    </form>
+   </div>
+</body>
+</html>

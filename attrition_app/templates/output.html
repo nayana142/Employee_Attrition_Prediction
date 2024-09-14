@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Prediction Result</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+<body class="output">
+    <div style='display: flex; align-items: center; justify-content: center;flex-direction: column;' >
+        <h1 style=" background-color: white;color:black;border-radius: 6px;padding: 10px;">Prediction Result</h1>
+        <h3 style="color:black;">The model's prediction: The employee is <strong>{{ prediction }}</h3>
+        <br>
+        <button style="background-color:black;" >
+        <a style="a" href="{% url 'homepage' %}">Back to Home</a>
+        </button>
+        
+    </div>
+</body>
+
+</html>

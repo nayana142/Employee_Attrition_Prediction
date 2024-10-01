@@ -1,5 +1,6 @@
 # Employee Attrition Prediction
-![image](https://github.com/user-attachments/assets/2e8afbaa-6058-45f6-9925-25b369144eb3)
+![image](https://github.com/user-attachments/assets/4e59d1a1-4af9-47d2-b96b-6c8638753eb8)
+
 ![Screenshot 2024-09-14 141619](https://github.com/user-attachments/assets/ecefad33-8c6c-4ab4-b385-86d6f0ee4416)
 
 ![Screenshot 2024-09-14 141639](https://github.com/user-attachments/assets/5ea0aede-1ac5-4c9f-8f83-e9951beee0bc)
